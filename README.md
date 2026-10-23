@@ -13,6 +13,8 @@ Temporary root for the locked-bootloader Samsung Galaxy S21 FE 5G on one exact f
 
 This does not unlock the bootloader. Root disappears after reboot.
 
+![GhostLock SM-G990B exploit chain](docs/exploit-chain.svg)
+
 > [!CAUTION]
 > This build is firmware-specific. A wrong kernel can panic or corrupt memory. Force reboot before every attempt, wait for `sys.boot_completed=1`, and never retry on the same boot after the PI writer ran.
 
@@ -75,7 +77,7 @@ ANDROID_NDK_HOME=/opt/android-sdk/ndk/27.1.12297006 make legacy
 | Root | pipe physrw disables SELinux and inserts a CFI-valid UMH work item into `system_unbound_wq` |
 | Verification | the uid-0 daemon runs `id`, then the exploit restores modified kernel globals |
 
-Open [`docs/exploit-chain.html`](docs/exploit-chain.html) locally for the diagram. The shorter technical explanation is in [`docs/TECHNICAL.md`](docs/TECHNICAL.md).
+The rendered diagram above comes from [`docs/exploit-chain.html`](docs/exploit-chain.html). The shorter technical explanation is in [`docs/TECHNICAL.md`](docs/TECHNICAL.md).
 
 ## Repository layout
 

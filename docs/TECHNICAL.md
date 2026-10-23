@@ -12,7 +12,9 @@ This port targets one kernel build. It is not a generic Samsung exploit.
 6. **Kernel R/W**: the fake table routes ashmem reads and writes through configfs callbacks. A second controlled slab is watched through this read primitive until a marked order-3 skb owns the exact page. Freeing only that skb lets kmalloc-1k pipe-buffer arrays take it. Forged pipe buffers provide page-granular physical read/write.
 7. **Root**: the exploit clears `selinux_enforcing`, inserts a synthetic work item into `system_unbound_wq`, and calls `call_usermodehelper_exec_work.cfi_jt`. The helper starts a uid-0 daemon and the normal client verifies `id -u == 0`.
 
-The overview diagram is in [`exploit-chain.html`](exploit-chain.html).
+![GhostLock SM-G990B exploit chain](exploit-chain.svg)
+
+The editable diagram source is [`exploit-chain.html`](exploit-chain.html).
 
 ## Device-specific details
 
