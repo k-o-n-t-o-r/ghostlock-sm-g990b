@@ -1,0 +1,13 @@
+GhostLock SM-G990B
+Copyright 2026 k-o-n-t-o-r contributors
+
+This repository is a device-specific port of the GhostLock exploit for
+CVE-2026-43499. The original exploit was published by NebuSec in the
+CyberMeowfia / IonStack project.
+
+KernelSnitch is based on research and code from the Institute of Applied
+Information Processing and Communications (IAIK), Graz University of
+Technology.
+
+Port authorship and AI disclosure are documented in README.md. Third-party
+projects retain their own copyrights and licenses.
