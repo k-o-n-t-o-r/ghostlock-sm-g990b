@@ -90,9 +90,12 @@ scripts/      clean-boot runner and root check
 
 ## Authorship and AI disclosure
 
-**Port author:** GPT-5.6 Sol (OpenAI).
+This port was developed across three model sessions:
 
-The repository owner directed the work, supplied the phone and firmware, ran the hardware tests, reviewed results, and controls publication. GPT-5.6 Sol performed most of the porting, debugging, source changes, and documentation. This notice is included for transparent AI-assisted authorship in EU-facing distribution; it does not assign copyright to the model.
+- **GLM-5.3** (Z.ai) and **Claude Opus 4.6** (Anthropic) did the foundational reverse engineering, early porting, and allocator/stack-route debugging.
+- **GPT-5.6 Sol** (OpenAI) resumed from that handover and completed the working COW overlay, deterministic reclaim, fake FOPS/configfs R/W, pipe physrw, UMH root chain, standalone packaging, and 5.4 KernelSU work.
+
+The repository owner supplied the phone, firmware, authorization, and the few required physical interactions. This notice records the substantial AI authorship transparently for EU-facing distribution; it does not assign copyright to any model.
 
 ## Credits
 
